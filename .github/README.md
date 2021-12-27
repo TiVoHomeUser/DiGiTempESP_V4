@@ -7,7 +7,7 @@ This version can auto detect the sensor type and create or connect to an access 
  Single Sensor 
 ![Root Page](./DiGiTempESP_1.png)
 
-After setting up the first ESP8266 + DHT22 temperature sensor I built a second for the other side of the room I wanted to monitor both from a single device like a smart phone so I setup one of the devices as an access point capable of serving a WEB page on the local network this page displays one or more of the temperature sensors. Each device registers it's hostname using mDNS I used DigiTemp for the host name allowing access of the monitoring device using the URL "http://DigiTemp.local".  I have tested with 6 sensors the maximum number of concurrent connections stated for ESP8266WiFi is 8 therefore it should work with up to 7 sensors leaving 1 connection for the smart phone, tablet or PC.    
+After setting up the first ESP8266 + DHT22 temperature sensor I built a second for the other side of the room I wanted to monitor both from a single device like a smart phone so I setup one of the devices as an access point capable of serving a WEB page on the local network this page displays one or more of the temperature sensors. Each device registers it's hostname using mDNS I used DigiTemp-AP for the host name allowing access of the monitoring device using the URL "http://DigiTemp-AP.local".  I have tested with 6 sensors the maximum number of concurrent connections stated for ESP8266WiFi is 8 therefore it should work with up to 7 sensors leaving 1 connection for the smart phone, tablet or PC.    
  
 Note: I replaced the Adafruit DHT Library DHT.h and DHT.cpp with modified local files to allow auto sensing of the DHT sensor type. Now I can easily swap sensors without re programming the ESP.
 
